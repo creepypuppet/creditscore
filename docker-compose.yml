@@ -1,0 +1,54 @@
+version: "3.7"
+
+services:
+  model:
+    build:
+      context: ./model
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./model:/model
+    restart: always
+
+  php:
+    build:
+      context: ./web
+      target: final
+    volumes:
+      - ./web:/var/www:rw,cached
+      - php_socket:/var/run/php
+    command: sh -c "composer install && php-fpm"
+
+  supervisor:
+    build:
+      context: ./web
+      target: final
+    command: supervisord -c /etc/supervisor/conf.d/worker.conf
+    volumes:
+      - ./web:/var/www:rw,cached
+      - ./web/docker/supervisor/worker.conf:/etc/supervisor/conf.d/worker.conf:rw,cached
+    depends_on:
+      - php
+
+  caddy:
+    build:
+      context: ./docker/caddy
+    depends_on:
+      - php
+    environment:
+      DOMAIN: ${DOMAIN}
+    restart: unless-stopped
+    volumes:
+      - ./web/public:/var/www/public:ro
+      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - php_socket:/var/run/php
+      - caddy_data:/data
+      - caddy_config:/config
+    ports:
+      - "80:80"
+      - "443:443"
+
+volumes:
+  php_socket:
+  caddy_data:
+  caddy_config:
