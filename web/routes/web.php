@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ModelController::class, 'index']);
-Route::get('/predict', [ModelController::class, 'predict']);
+Route::post('/predict', [ModelController::class, 'predict'])->name('predict');

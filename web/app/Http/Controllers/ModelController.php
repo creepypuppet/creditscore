@@ -3,23 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ModelController extends Controller
 {
     public function index()
     {
-        return response()->json();
+        return view('index');
     }
 
-    public function predict()
+    public function predict(Request $request)
     {
-        $command = escapeshellcmd('././model/main.py/');
-        $output = shell_exec($command);
-        return response()->json([
-            'predict' => $output
-        ]);
-        return redirect()->back()->with([
-            'prediction' => $output
-        ]);
+        $data = $request->collect();
+        unset($data['_token']);
+        $data = $data->values()->map(function ($value) {
+            return (int) $value;
+        })->toArray();
+        $data = json_encode($data);
+        $response = Http::get("http://model:8080/model?data=$data")->body();
+        if ($response == '0') {
+            Alert::success('Congratulations', 'Approved');
+        } else {
+            Alert::error('Sorry', 'Rejected');
+        }
+        return redirect()->back();
     }
 }
