@@ -34,7 +34,7 @@
                 <div class="formbold-radio-flex">
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="gender"
@@ -48,7 +48,7 @@
 
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="gender"
@@ -69,7 +69,7 @@
                 <div class="formbold-radio-flex">
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="car"
@@ -83,7 +83,7 @@
 
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="car"
@@ -104,7 +104,7 @@
                 <div class="formbold-radio-flex">
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="property"
@@ -118,7 +118,7 @@
 
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="property"
@@ -139,7 +139,7 @@
                 <div class="formbold-radio-flex">
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="work_phone"
@@ -153,7 +153,7 @@
 
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="work_phone"
@@ -174,7 +174,7 @@
                 <div class="formbold-radio-flex">
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="phone"
@@ -188,7 +188,7 @@
 
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="phone"
@@ -209,7 +209,7 @@
                 <div class="formbold-radio-flex">
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="email"
@@ -223,7 +223,7 @@
 
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="email"
@@ -244,7 +244,7 @@
                 <div class="formbold-radio-flex">
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="unemployed"
@@ -258,7 +258,7 @@
 
                     <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                            <input
+                            <input required
                                 class="formbold-input-radio"
                                 type="radio"
                                 name="unemployed"
@@ -273,7 +273,7 @@
             </div>
             <div class="formbold-input-group">
                 <label for="children" class="formbold-form-label"> Number of children </label>
-                <input
+                <input required
                     type="number"
                     name="children"
                     id="children"
@@ -282,7 +282,7 @@
             </div>
             <div class="formbold-input-group">
                 <label for="family" class="formbold-form-label"> Number of family members </label>
-                <input
+                <input required
                     type="number"
                     name="family"
                     id="family"
@@ -291,7 +291,7 @@
             </div>
             <div class="formbold-input-group">
                 <label for="account" class="formbold-form-label"> Month of credit card </label>
-                <input
+                <input required
                     type="number"
                     name="account"
                     id="account"
@@ -300,7 +300,7 @@
             </div>
             <div class="formbold-input-group">
                 <label for="income" class="formbold-form-label"> Total income </label>
-                <input
+                <input required
                     type="number"
                     name="income"
                     id="income"
@@ -309,7 +309,7 @@
             </div>
             <div class="formbold-input-group">
                 <label for="age" class="formbold-form-label"> Age </label>
-                <input
+                <input required
                     type="number"
                     name="age"
                     id="age"
@@ -318,7 +318,7 @@
             </div>
             <div class="formbold-input-group">
                 <label for="age" class="formbold-form-label"> Years employed </label>
-                <input
+                <input required
                     type="number"
                     name="years_employed"
                     id="years_employed"
@@ -331,7 +331,7 @@
                     Income type
                 </label>
 
-                <select class="formbold-form-select" name="income_type" id="income_type">
+                <select required class="formbold-form-select" name="income_type" id="income_type">
                     <option value="0">Commercial associate</option>
                     <option value="1">Pensioner</option>
                     <option value="2">State servant</option>
@@ -345,7 +345,7 @@
                     Education type
                 </label>
 
-                <select class="formbold-form-select" name="education_type" id="education_type">
+                <select required class="formbold-form-select" name="education_type" id="education_type">
                     <option value="0">Academic degree</option>
                     <option value="1">Higher education</option>
                     <option value="2">Incomplete higher</option>
@@ -359,7 +359,7 @@
                     Family status
                 </label>
 
-                <select class="formbold-form-select" name="family_status" id="family_status">
+                <select required class="formbold-form-select" name="family_status" id="family_status">
                     <option value="0">Civil marriage</option>
                     <option value="1">Married</option>
                     <option value="2">Separated</option>
@@ -373,7 +373,7 @@
                     Housing type
                 </label>
 
-                <select class="formbold-form-select" name="housing_type" id="housing_type">
+                <select required class="formbold-form-select" name="housing_type" id="housing_type">
                     <option value="0">Co-op apartment</option>
                     <option value="1">House / apartment</option>
                     <option value="2">Municipal apartment</option>
@@ -388,7 +388,7 @@
                     Occupation type
                 </label>
 
-                <select class="formbold-form-select" name="occupation_type" id="occupation_type">
+                <select required class="formbold-form-select" name="occupation_type" id="occupation_type">
                     <option value="0">Accountants</option>
                     <option value="1">Cleaning staff</option>
                     <option value="2">Cooking staff</option>
